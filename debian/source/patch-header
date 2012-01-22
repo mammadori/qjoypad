@@ -1,0 +1,13 @@
+subject: Collected Debian patches for qjoypad
+Author: Marco Amadori <marco.amadori@gmail.com>
+
+The qjoypad package is maintained in Git rather than maintaining
+patches as separate files, and separating the patches doesn't seem
+to be worth the effort.  They are therefore all included in this
+single Debian patch.
+
+For full commit history and separated commits, see the packaging Git
+repository.
+
+# The above text was "heavily inspired" by: 
+# http://www.eyrie.org/~eagle/notes/debian/git.html

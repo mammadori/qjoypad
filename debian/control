@@ -1,0 +1,23 @@
+Source: qjoypad
+Section: x11
+Priority: extra
+Maintainer: Marco Amadori <marco.amadori@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), qt4-qmake, libqt4-dev
+Standards-Version: 3.9.2
+Homepage: http://qjoypad.sourceforge.net
+Vcs-Git: git://git.debian.org/users/mammadori-guest/qjoypad.git
+Vcs-Browser: http://git.debian.org/?p=users/mammadori-guest/qjoypad.git;a=summary
+
+Package: qjoypad
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Joypad/Joystick to key/mouse remapper 
+ QJoyPad is a convenient little program with a QT interface that converts
+ movement and button presses on a gamepad or joystick into key presses,
+ mouse clocks, and mouse movement in X.
+ .
+ This lets you play all those games that for some reason don't have joystick
+ support with your joystick. QJoyPad also gives you the advantage of multiple
+ saved layouts so you can have a separate setting for every game, or for
+ every class of game!
+

@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+INSTALLDIR=$$(pwd)/debian/qjoypad
+
+
+%:
+	dh $@ -Dsrc 
+
+override_dh_auto_configure:
+	dh_auto_configure -- DEVDIR=/dev/input DEFINES\ +=\ \  CONFIG\ +=\ release
+
+
+override_dh_auto_install:
+	rm $(INSTALLDIR)/usr/share/doc/qjoypad4 -rf
+	install -D --mode=644 debian/qjoypad.desktop $(INSTALLDIR)/usr/share/applications/qjoypad.desktop
+	dh_auto_install
+
+

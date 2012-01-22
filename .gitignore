@@ -1,0 +1,9 @@
+*.o
+src/moc_*.cpp
+debian/files
+.pc
+src/Makefile
+src/qjoypad
+debian/qjoypad/
+debian/qjoypad.debhelper.log
+debian/qjoypad.substvars

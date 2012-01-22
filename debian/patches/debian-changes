@@ -1,0 +1,34 @@
+subject: Collected Debian patches for qjoypad
+Author: Marco Amadori <marco.amadori@gmail.com>
+
+The qjoypad package is maintained in Git rather than maintaining
+patches as separate files, and separating the patches doesn't seem
+to be worth the effort.  They are therefore all included in this
+single Debian patch.
+
+For full commit history and separated commits, see the packaging Git
+repository.
+
+# The above text was "heavily inspired" by: 
+# http://www.eyrie.org/~eagle/notes/debian/git.html
+--- qjoypad-4.1.0.orig/src/qjoypad.pro
++++ qjoypad-4.1.0/src/qjoypad.pro
+@@ -11,13 +11,13 @@
+ 
+ #####   Setup Targets   #####
+ 
+-icons.path = $$INSTALL_PREFIX/share/pixmaps/qjoypad
++icons.path = $$PREFIX/share/pixmaps/qjoypad
+ icons.conf_path = $$PREFIX/share/pixmaps/qjoypad
+-icons.extra = cp ../icons/* $${icons.path}; cd $${icons.path}; ln -sf gamepad4-24x24.png icon24.png; ln -sf gamepad3-64x64.png icon64.png; chmod -R a+r $${icons.path}
++icons.extra = cp ../icons/* $(INSTALL_ROOT)/$${icons.path}; cd $(INSTALL_ROOT)/$${icons.path}; ln -sf gamepad4-24x24.png icon24.png; ln -sf gamepad3-64x64.png icon64.png; chmod -R a+r $(INSTALL_ROOT)/$${icons.path}
+ 
+-doc.path = $$INSTALL_PREFIX/share/doc/qjoypad4
+-doc.extra = cp ../README.txt ../LICENSE.txt $${doc.path}
+-target.path = $$INSTALL_PREFIX/bin
++#doc.path = $$PREFIX/share/doc/qjoypad4
++#doc.extra = cp ../README.txt ../LICENSE.txt $(INSTALL_ROOT)/$${doc.path}
++target.path = $$PREFIX/bin
+ 
+ 
+ 

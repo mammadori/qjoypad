@@ -1,0 +1,4 @@
+qjoypad for Debian
+------------------
+
+I removed the fake configure file, this project is qmake based.

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=QJoypad
+Exec=qjoypad
+Type=Application
+Comment=Joypad to keyboard remapper
+Icon=/usr/share/pixmaps/qjoypad/icon64.png 
+Categories=System;Qt;

@@ -1,0 +1,40 @@
+.TH QJOYPAD "1" "January 2012" "qjoypad 4.1" "Application"
+.SH NAME
+qjoypad \- joypad to key remapper
+.SH SYNOPSIS
+.B qjoypad
+[\fI--device "/device/path"\fR] [\fI--notray\fR] [\fI"layout name"\fR]
+.SH DESCRIPTION
+.PP
+QJoyPad is a convenient little program with a QT interface that converts
+movement and button presses on a gamepad or joystick into key presses,
+mouse clocks, and mouse movement in X.
+.PP
+This lets you play all those games that for some reason don't have joystick
+support with your joystick. QJoyPad also gives you the advantage of
+multiple saved layouts so you can have a separate setting for every game, or
+for every class of game!
+.SH OPTIONS
+.TP
+\fB\-\-device\fR path
+Look for joystick devices in "path". This should
+be something like "/dev/input" if your game
+devices are in /dev/input/js0, /dev/input/js1, etc.
+.TP
+\fB\-\-notray\fR
+Do not use a system tray icon. This is useful for
+window managers that don't support this feature.
+.TP
+\fB\-\-update\fR
+Force a running instance of QJoyPad to update its
+list of devices and layouts.
+.TP
+"layout name"
+Load the given layout in an already running
+instance of QJoyPad, or start QJoyPad using the
+given layout.
+.SH AUTHOR                                                                                                                                  
+qjoypad was written by Nathan Gaylinn. 
+.PP                                                                                                                                         
+This manual page was written by Marco Amadori <marco.amadori@gmail.com>,                                                                    
+for the Debian project (and may be used by others).
