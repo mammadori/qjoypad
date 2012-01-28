@@ -10,7 +10,7 @@ INSTALLDIR=$$(pwd)/debian/qjoypad
 	dh $@ -Dsrc --buildsystem=qmake
 
 override_dh_auto_configure:
-	dh_auto_configure -- DEVDIR=/dev/input DEFINES\ +=\ \  CONFIG\ +=\ release
+	dh_auto_configure -- DEVDIR=/dev/input DEFINES+= CONFIG+=release
 
 override_dh_auto_install:
 	rm $(INSTALLDIR)/usr/share/doc/qjoypad4 -rf

@@ -15,13 +15,7 @@ icons.path = $$PREFIX/share/pixmaps/qjoypad
 icons.conf_path = $$PREFIX/share/pixmaps/qjoypad
 icons.extra = cp ../icons/* $(INSTALL_ROOT)/$${icons.path}; cd $(INSTALL_ROOT)/$${icons.path}; ln -sf gamepad4-24x24.png icon24.png; ln -sf gamepad3-64x64.png icon64.png; chmod -R a+r $(INSTALL_ROOT)/$${icons.path}
 
-#doc.path = $$PREFIX/share/doc/qjoypad4
-#doc.extra = cp ../README.txt ../LICENSE.txt $(INSTALL_ROOT)/$${doc.path}
 target.path = $$PREFIX/bin
-
-
-
-
 
 #####   Setup Compile   #####
 
@@ -76,4 +70,4 @@ SOURCES += axis.cpp \
 
 #####      Install      #####
 
-INSTALLS += target icons doc
+INSTALLS += target icons

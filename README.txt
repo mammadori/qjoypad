@@ -173,62 +173,7 @@ Chapter 1. Introduction
 
 Chapter 2. Getting Started
 
-2.1. Requirements
-
-     - A Linux computer and a Linux-compatible gaming device
-     - A Linux kernel with joystick support (see the Linux Kernel
-       HOWTO  [http://www.linuxdocs.org/HOWTOs/Kernel-HOWTO.html]
-       and the Linux joystick driver website
-       http://atrey.karlin.mff.cuni.cz/~vojtech/joystick/)
-     - XWindows (see www.xfree86.org)
-     - Trolltech's QT (see www.trolltech.com)
-     _________________________________________________________
-
-2.2. Installation
-
-   Installing QJoyPad should be a quick and painless process. The
-   basic procedure is:
-
-   ./config
-   make
-   make install
-
-   however,  there  are  some  settings  that  might  need  to be
-   changed.
-
-    1. Device  directory:  By  default,  QJoyPad  will  look  for
-       joystick  devices  in  /dev/input, but if your system puts
-       them  somewhere else, you'll need to run ./config with the
-       argument  --devdir=DIR,  where  DIR is where your joystick
-       devices reside. For instance, if your joystick devices are
-       /dev/js0, /dev/js1, etc., instead of running ./config, run
-       ./config --devdir="/dev"
-    2. Install  directory:  By default, QJoyPad will try to put a
-       copy   of   itself   in   /usr/local/bin,  some  icons  in
-       /usr/local/share/pixmaps,     and     this    readme    in
-       /usr/local/doc/qjoypad3 so that they will be accessible to
-       all  users.  If you want these files to go somewhere other
-       than  /usr/local (or if you don't have permission to write
-       to   /usr/local),   you'll   need  to  pass  the  argument
-       --prefix=DIR  to  ./config.  For example, if you wanted to
-       install  QJoyPad just for yourself in your home directory,
-       you  could  run  ./config --prefix="/home/user" instead of
-       ./config.
-    3. Use  Plain  Keys:  Normally,  QJoyPad doesn't use standard
-       XWindows  key names to describe your keyboard, but instead
-       uses  names  that  look nicer and are easier to recognize.
-       For   instance,   instead   of  "KP_Begin",  "Prior",  and
-       "Shift_L", QJoyPad uses "KP 5", "PageDown", and "L Shift".
-       If  you  think  generating  these  names  is  a  waste  of
-       processor  power, or if you don't think you're getting the
-       right  name for the key you're pressing, pass the argument
-       --plain_keys  to  ./config  and  QJoyPad will just use the
-       XWindows default names.
-
-   Of course, you can mix use as many of these options at once as
-   you    like.    For    instance    ./config    --devdir="/dev"
-   --prefix="/home/user" is completely valid.
-     _________________________________________________________
+moved on file README.install [Note of the Packager]
 
 Chapter 3. Using QJoyPad
 
